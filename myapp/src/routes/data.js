@@ -193,32 +193,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// router.get("/", async (req, res) => {
-//   try {
-//     const cars = await Car.find();
-//     console.log({ req });
-//     if (!cars || cars.length === 0) {
-//       return res.status(404).json({
-//         success: false,
-//         message: "No cars found in the database.",
-//       });
-//     }
-
-//     return res.status(200).json({
-//       success: true,
-//       message: "Cars fetched successfully.",
-//       data: cars,
-//     });
-//   } catch (err) {
-//     console.error("Error fetching cars:", err.message);
-
-//     return res.status(500).json({
-//       success: false,
-//       message: "An error occurred while fetching cars.",
-//       error: err.message,
-//     });
-//   }
-// });
 
 // Add a new car
 router.post("/", async (req, res) => {

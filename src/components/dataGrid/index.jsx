@@ -12,9 +12,6 @@ const DataGrid = () => {
     return (
       <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
         <button
-          // onClick={() => {
-          //   alert(`Viewing row: ${JSON.stringify(params.data, null, 2)}`);
-          // }}
           onClick={() => {
             // Navigate to the details page with the car's ID in the URL
             navigate(`/car-details/${params.data._id}`);
@@ -184,25 +181,6 @@ const DataGrid = () => {
     getData(); // Call getData with the updated filter model
   }, []);
 
-  // Fetch data from API
-  // const getData = async () => {
-  //   try {
-  //     const response = await fetch("http://localhost:4000/data");
-  //     const data = await response.json();
-  //     if (data.success) {
-  //       setRowData(data.data);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error);
-  //   }
-  // };
-
-  // const onFilterChanged = (event) => {
-  //   const gridApi = event.api;
-  //   const appliedFilterModel = gridApi.getFilterModel();
-  //   setFilterModel(appliedFilterModel);
-
-  // };
 
   const onCellValueChanged = async (event) => {
     const updatedData = event.data; // Get updated row
